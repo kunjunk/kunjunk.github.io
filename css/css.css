@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'del';
+    src: url('../font/del.ttf');
+}
+
+@font-face {
+    font-family: 'robotothin';
+    src: url('../font/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'unica';
+    src: url('../font/UnicaOne-Regular.ttf');
+}
+
+body {
+    font-family: unica;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    font-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#rotate {
+    width: 5vh;
+    height: 5vh;
+    min-width: 40px;
+    min-height: 40px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    z-index: 5;
+    opacity: 0.2;
+    transform: scale(0.7,0.7);
+}
+
+#bxcontainer {
+    position: absolute;
+    top: 80px;
+    right: -310px;
+    /*  display: none;*/
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    z-index: 4;
+    transition: 1s ease;
+}
+
+#newscontainer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 25vw;
+}
+
+.lbx {
+    transition: 0.3s ease;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.lbx:hover {
+    transition: 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.lbx img {
+    transition: 0.3s ease;
+    width: 50%;
+    max-height: 50%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    margin-top: 10px;
+}
+
+.over {
+    opacity: 0.5 !important;
+    transform: translateX( -30px) scale(0.8, 0.8) !important;
+    transition: 0.7s linear;
+}
+
+.out {
+    opacity: 0.2 !important;
+    transform: translateX( 0px) scale(0.7, 0.7) !important;
+    transition: 0.5s linear;
+}
+
+.slideout {
+    transform: translateX(-330px);
+    transition: 0.7s ease-out;
+}
+
+.slidein {
+    transform: translateX( 330px);
+    transition: 0.5s ease-in;
+}
+
+#overlay {
+    transition: 0.4s ease;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.links {
+    transition: 1s ease;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+}
+
+.links:hover {
+    transition: 0.5s ease-out;
+    opacity: 50;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12vh;
+    text-align: center;
+    width: 10vw;
+}
+
+p {
+    transition: 0.2s ease-out;
+    font-size: 2em;
+    margin: 0;
+    line-height: 0.8;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hour, #minute, #seconds {
+    font-size: 14vw;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+.separator {
+    width: 3vw;
+}
+
+.logo {
+    transition: 0.3s ease;
+    width: 30%;
+    opacity: 0.5;
+}
+
+#searchline {
+    width: 35vw;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    transition: 0.2s ease;
+    display: flex;
+    align-self: center;
+    width: 100%;
+    height: 50px;
+    font-size: 1.4em;
+    font-family: 'robotothin';
+    color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+.search:focus {
+    transition: 0.2s ease;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.3);
+}

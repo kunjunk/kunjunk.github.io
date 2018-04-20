@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title id="title">NewTab</title>
+    <link href="css/css.css" rel="stylesheet">
+</head>
+
+<body id="body" class="body" onload="document.search.q.focus(), bgupdate();">
+    <img id="rotate" src="img/up.svg" onmouseover="rotateIn()">
+
+
+
+    <div id="bxcontainer" onmouseleave="rotateOut()">
+        <div class="row">
+            <a href="http://mail.google.com">
+                <div class="lbx" id="gm" onmouseover="grow('gmail'),lbxg('gm')" onmouseout="min('gmail'),lbxm('gm')">
+                    <img src="logos/gmail.svg" id="gmail">
+                </div>
+            </a>
+            <a href="http://www.reddit.com">
+                <div class="lbx" id="red" onmouseover="grow('reddit'),lbxg('red')" onmouseout="min('reddit'),lbxm('red')">
+                    <img src="logos/reddit.svg" id="reddit">
+                </div>
+            </a>
+            <a href="http://www.facebook.com">
+                <div class="lbx" id="fb" onmouseover="grow('facebook'),lbxg('fb')" onmouseout="min('facebook'),lbxm('fb')">
+                    <img src="logos/facebook.svg" id="facebook">
+                </div>
+            </a>
+        </div>
+        <div class="row">
+            <a href="http://192.168.1.50:32400/web">
+                <div class="lbx" id="pl" onmouseover="grow('plex'),lbxg('pl')" onmouseout="min('plex'),lbxm('pl')">
+                    <img src="logos/plex.svg" id="plex">
+                </div>
+            </a>
+            <a href="http://play.google.com/music/listen">
+                <div class="lbx" id="gmu" onmouseover="grow('gmusic'),lbxg('gmu')" onmouseout="min('gmusic'),lbxm('gmu')">
+                    <img src="logos/gmusic.svg" id="gmusic">
+                </div>
+            </a>
+        </div>
+        <div class="row">
+            <a href="http://www.bbc.com/news">
+                <div class="lbx" id="b" onmouseover="grow('bbc'),lbxg('b')" onmouseout="min('bbc'),lbxm('b')">
+                    <img src="logos/bbc.svg" id="bbc">
+                </div>
+            </a>
+            <a href="http://www.reuters.com">
+                <div class="lbx" id="re" onmouseover="grow('reuters'),lbxg('re')" onmouseout="min('reuters'),lbxm('re')">
+                    <img src="logos/reuters.svg" id="reuters">
+                </div>
+            </a>
+            <a href="http://www.economist.com">
+                <div class="lbx" id="eco" onmouseover="grow('economist'),lbxg('eco')" onmouseout="min('economist'),lbxm('eco')">
+                    <img src="logos/economist.svg" id="economist">
+                </div>
+            </a>
+        </div>
+        <div class="row">
+            <a href="http://www.arstechnica.com/">
+                <div class="lbx" id="ar" onmouseover="grow('ars'),lbxg('ar')" onmouseout="min('ars'),lbxm('ar')">
+                    <img src="logos/ars.svg" id="ars">
+                </div>
+            </a>
+            <a href="http://www.engadget.com/">
+                <div class="lbx" id="en" onmouseover="grow('engadget'),lbxg('en')" onmouseout="min('engadget'),lbxm('en')">
+                    <img src="logos/engadget.svg" id="engadget">
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="time">
+            <div class="number" id="hour">00</div>
+            <div class="separator">  </div>
+            <div class="number" id="minute">00</div>
+            <div class="separator">  </div>
+            <div class="number" id="seconds">00</div>
+        </div>
+        <div id="searchline">
+
+            <form name="search" action="http://www.google.com/search" onfocus="focusFunction()" onblur="blurFunction()">
+                <input type="text" name="q" value="" class="search" onfocus="focusFunction()" onblur="blurFunction()">
+            </form>
+        </div>
+
+    </div>
+    <!--
+    <div class="links">
+        <a href="http://www.facebook.com" onmouseover="grow('facebook')" onmouseout="min('facebook')">
+            <div class="link">
+              <img src="logos/facebook.svg" alt="" id="facebook" class="logo">
+            </div>
+        </a>
+        <a href="http://www.reddit.com" onmouseover="grow('reddit')" onmouseout="min('reddit')">
+            <div class="link">
+              <img src="logos/reddit.svg" alt="" id="reddit" class="logo">
+            </div>
+        </a>
+        <a href="http://192.168.1.50:32400/web" onmouseover="grow('plex')" onmouseout="min('plex')">
+            <div class="link">
+              <img src="logos/plex.svg" alt="" id="plex" class="logo">
+            </div>
+        </a>
+        <a href="http://play.google.com/music/listen" onmouseover="grow('gmusic')" onmouseout="min('gmusic')">
+            <div class="link">
+              <img src="logos/gmusic.svg" alt="" id="gmusic" class="logo">
+            </div>
+        </a>
+        <a href="http://mail.google.com" onmouseover="grow('gmail')" onmouseout="min('gmail')">
+            <div class="link">
+              <img src="logos/gmail.svg" alt="" id="gmail" class="logo">
+            </div>
+        </a>
+        <a href="http://bbc.co.uk/news" onmouseover="grow('bbc')" onmouseout="min('bbc')">
+            <div class="link">
+              <img src="logos/bbc.svg" alt="" id="bbc" class="logo">
+            </div>
+        </a>
+        <a href="http://www.economist.com" onmouseover="grow('economist')" onmouseout="min('economist')">
+            <div class="link">
+              <img src="logos/economist.svg" alt="" id="economist" class="logo">
+            </div>
+        </a>
+        <a href="http://www.reuters.com/" onmouseover="grow('reuters')" onmouseout="min('reuters')">
+            <div class="link">
+              <img src="logos/reuters.svg" alt=""  id="reuters" class="logo">
+            </div>
+        </a>
+        <a href="http://www.arstechnica.com/" onmouseover="grow('ars')" onmouseout="min('ars')">
+            <div class="link">
+              <img src="logos/ars.svg" alt="" id="ars" class="logo">
+            </div>
+        </a>
+        <a href="http://www.engadget.com/" onmouseover="grow('engadget')" onmouseout="min('engadget')">
+            <div class="link">
+              <img src="logos/engadget.svg" alt="" id="engadget" class="logo">
+            </div>
+        </a>
+    </div>
+-->
+    <div id="overlay">
+
+    </div>
+
+</body>
+
+<script src="js/dateTimeF.js" type="text/javascript"></script>
+<script src="js/overlay.js" type="text/javascript"></script>
+<script src="js/wallpaper.js" type="text/javascript"></script>
+<script src="js/js.js" type="text/javascript"></script>
+
+</html>

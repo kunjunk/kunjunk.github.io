@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'gothamBook';
+  src: url('../fonts/Gotham-Book.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+
+
+body{
+  overflow: hidden;
+  background-image: url('../img/bg.svg');
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+}
+
+.linkbox{
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 5vw;
+}
+
+.link{
+  width: 20vw;
+  min-width: 75px;
+  height: 5vh;
+  background-color: rgba(0, 0, 0, 1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.3s ease-out;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.link:hover{
+  background-color: #161616;
+  transition: 0.3s ease-out;
+}
+
+
+.hover{
+color: #0088FF;
+text-align: center;
+transition: 0.3s ease-in;
+}
+.out{
+  color: #232323;
+  text-align: center;
+  transition: 0.3s ease-out;
+
+}
